@@ -16,7 +16,7 @@ if __name__ == "__main__":
         df = pd.read_parquet("nsf-awards/raw/" + filename)
 
         # Drop the AGENCY column in place
-        df.drop(columns="AwardTitle", inplace=True)
+        df.drop(columns="AGENCY", inplace=True)
 
         # save the dataframe as a parquet file in the /clean directory
         df.to_parquet("nsf-awards/clean/" + filename)
